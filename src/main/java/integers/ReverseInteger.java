@@ -1,4 +1,7 @@
 package integers;
 
-public class reverseInteger {
+
+
+
+public class ReverseInteger {
 }
