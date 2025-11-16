@@ -26,7 +26,7 @@ public class ReverseInteger {
         while( x!= 0){
             int lastDigit = x%10; // getting the last digit 
             /**
-             * the purpose of dividing by then is that, when reversing the number,
+             * the purpose of dividing by ten is that, when reversing the number,
              * since the current reversed integer is multiplied by 10, if it's 
              * already greater than the min/max value divided by 10, then it'll overflow.
              * so we return 0. */
