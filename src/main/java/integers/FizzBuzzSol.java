@@ -1,26 +1,13 @@
 package integers;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 public class FizzBuzzSol {
 
-    public List<String> fizzBuzz(int n) {
-        List<String> ans = new ArrayList<>();
-        for(int i=1; i<=n; i++){
-            if(i%3 ==0 && i%5 ==0){
-                ans.add("FizzBuzz");
-            } else if (i%3 ==0){
-                ans.add("Fizz");
-            }else if(i%5 ==0){
-                ans.add("Buzz");
-            }else{
-                ans.add(String.valueOf(i));
-            }
-        }
-        return ans;
-    }
+    private static final Logger logger = Logger.getLogger(FizzBuzzSol.class.getName());
 
-    public String[] fizzBuzz2(int n) {
+    public String[] fizzBuzz(int n) {
         String [] ans = new String [n];
         for(int i=1; i<=n; i++){
             if(i%3 ==0 && i%5 ==0){
@@ -43,9 +30,11 @@ public class FizzBuzzSol {
     public static void main(String[] args) {
 
         FizzBuzzSol f = new FizzBuzzSol();
-        int n = 15;
-        List<String> ans = f.fizzBuzz(n);
-        System.out.println(ans);
+        Scanner sc = new Scanner(System.in);
+        logger.info("Enter your integer value for FizzBuzz : ");
+        int n = sc.nextInt();
+        logger.info(() -> "your FizzBuzz output is "+ Arrays.toString(f.fizzBuzz(n)));
+
 
     }
 }
